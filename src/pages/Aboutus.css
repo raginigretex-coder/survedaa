@@ -32,20 +32,6 @@
   --aboutus-glow-orange: rgba(172, 132, 48, 0.28);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) {
-    --aboutus-text: #ffffff;
-    --aboutus-description: rgba(255, 255, 255, 0.96);
-    --aboutus-button-text: #ffffff;
-    --aboutus-button-border: rgba(255, 255, 255, 0.94);
-    --aboutus-button-bg: rgba(10, 10, 14, 0.24);
-    --aboutus-button-hover-bg: rgba(255, 255, 255, 0.2);
-    --aboutus-glow-purple: rgba(120, 78, 184, 0.36);
-    --aboutus-glow-pink: rgba(182, 58, 130, 0.36);
-    --aboutus-glow-orange: rgba(172, 132, 48, 0.28);
-  }
-}
-
 .aboutus-page {
   position: relative;
   min-height: clamp(520px, 70vw, 760px);

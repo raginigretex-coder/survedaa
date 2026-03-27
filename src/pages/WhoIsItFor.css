@@ -65,37 +65,6 @@
 }
 
 /* Default theme support when `data-theme` isn't set in markup/JS. */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) {
-    --showcase-bg: #111216;
-    --showcase-heading: #f4f4f4;
-    --showcase-muted: #ffffff;
-    --showcase-muted-p: rgba(255, 255, 255, 0.78);
-    --showcase-kicker: rgba(255, 255, 255, 0.88);
-    --showcase-card-bg: #1e2026;
-    --showcase-gradient-a: #d2a937;
-    --showcase-gradient-b: #bb2b63;
-    --showcase-gradient-c: #692293;
-
-    --showcase-large-title: #ffffff;
-    --showcase-large-text: rgba(255, 255, 255, 0.88);
-    --showcase-small-title: #f4f4f4;
-    --showcase-small-text: rgba(255, 255, 255, 0.72);
-    --showcase-phone-bg: #0f1115;
-
-    --showcase-dashboard-bg: #ffffff;
-    --showcase-dashboard-border: #e4e4e4;
-    --showcase-dashboard-topbar-bg: #f4f4f4;
-    --showcase-dashboard-topbar-border: #ebebeb;
-    --showcase-large-overlay: linear-gradient(
-      90deg,
-      rgba(10, 11, 15, 0.74) 0%,
-      rgba(10, 11, 15, 0.42) 45%,
-      rgba(10, 11, 15, 0.06) 74%
-    );
-    --showcase-large-text-shadow: 0 4px 26px rgba(0, 0, 0, 0.42);
-  }
-}
 
 .showcase-page {
   background: var(--showcase-bg);

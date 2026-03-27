@@ -274,8 +274,3 @@ ul.our-offering-card-text {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .our-offering-page {
-    background: #101217;
-  }
-}

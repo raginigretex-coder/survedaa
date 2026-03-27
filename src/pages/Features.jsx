@@ -6,14 +6,14 @@ const FEATURES = [
     id: '01',
     title: 'Instant Room Booking',
     description:
-      'Browse live availability of your Gretex Music Room and reserve a slot in seconds â€” no calls, no queues, no confusion.',
+      'Browse live availability of your Gretex Music Room and reserve a slot in seconds — no calls, no queues, no confusion.',
     imageSrc: '/images/howitwork.avif',
   },
   {
     id: '02',
     title: 'Structured Courses & Enrolment',
     description:
-      'Browse certified courses across Guitar, Keyboard, Drums, Vocals, DJ, and more. Enrol, attend, and grade â€” all inside the app.',
+      'Browse certified courses across Guitar, Keyboard, Drums, Vocals, DJ, and more. Enrol, attend, and grade — all inside the app.',
     imageSrc: '/images/whyitwork-01.avif',
   },
   {

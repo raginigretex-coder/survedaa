@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Inter:wght@400;500;700;800&display=swap');
+
+:root,
+[data-theme='light'] {
+  --our-offering-bg: #f6f6f7;
+  --our-offering-kicker: #1c1c1f;
+  --our-offering-title: #0f0f10;
+  --our-offering-description: #1f1f21;
+  --our-offering-card-text: #5f5f62;
+  --our-offering-glow-purple: rgba(170, 104, 240, 0.6);
+  --our-offering-glow-pink: rgba(237, 70, 165, 0.65);
+  --our-offering-glow-orange: rgba(237, 216, 96, 0.92);
+}
+
+[data-theme='dark'] {
+  --our-offering-bg: #101217;
+  --our-offering-kicker: #e8e8ea;
+  --our-offering-title: #ffffff;
+  --our-offering-description: #d7d7dc;
+  --our-offering-card-text: #a9acb6;
+  --our-offering-glow-purple: rgba(120, 78, 184, 0.36);
+  --our-offering-glow-pink: rgba(182, 58, 130, 0.36);
+  --our-offering-glow-orange: rgba(172, 132, 48, 0.28);
+}
+
+.our-offering-page {
+  background: var(--our-offering-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.our-offering-inner {
+  width: min(1300px, 100%);
+  margin: 0 auto;
+  padding: clamp(44px, 6vw, 200px) clamp(16px, 4vw, 40px);
+  position: relative;
+  z-index: 1;
+}
+
+.our-offering-kicker {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: var(--our-offering-kicker);
+  letter-spacing: 0.02em;
+  font-family: "Instrument Serif", "Instrument Serif Placeholder", serif;
+  font-style: italic;
+  font-size: 30px;
+  line-height: 1em;
+  text-align: left;
+}
+
+.our-offering-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: clamp(32px, 6vw, 120px);
+  align-items: center;
+}
+
+.our-offering-title {
+  margin: 0;
+  font-family: "Satoshi", "Satoshi Placeholder", sans-serif;
+  font-size: clamp(2.5rem, 6vw, 6.25rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1em;
+  color: var(--our-offering-title);
+}
+
+.our-offering-title-accent {
+  font-family: "Instrument Serif", "Instrument Serif Placeholder", serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0em;
+}
+
+.our-offering-description {
+  margin: 0;
+  font-family: "Satoshi", "Satoshi Placeholder", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  line-height: 1.4em;
+  letter-spacing: -0.05em;
+  color: var(--our-offering-description);
+  text-align: left;
+  font-weight: 500;
+}
+
+.our-offering-grid {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+}
+
+.our-offering-card {
+  max-width: 360px;
+  width: 100%;
+}
+
+.our-offering-card-title {
+  margin: 0 0 20px;
+  font-family: "Satoshi", "Satoshi Placeholder", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--our-offering-title);
+}
+
+.our-offering-card-text {
+  margin: 0;
+  font-family: "Satoshi", "Satoshi Placeholder", sans-serif;
+  font-size: clamp(0.94rem, 0.82rem + 0.3vw, 1.02rem);
+  line-height: 1.62;
+  color: var(--our-offering-card-text);
+}
+
+ul.our-offering-card-text {
+  padding-inline-start: 2rem;
+}
+
+.our-offering-bottom-strip {
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  bottom: -3%;
+  height: clamp(240px, 30vw, 360px);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1;
+  filter: blur(7px);
+  background:
+    radial-gradient(56% 70% at 18% 100%, var(--our-offering-glow-purple) 0%, transparent 92%),
+    radial-gradient(52% 70% at 50% 100%, var(--our-offering-glow-pink) 0%, transparent 102%),
+    radial-gradient(70% 85% at 85% 100%, var(--our-offering-glow-orange) 0%, transparent 110%);
+}
+
+@media (max-width: 980px) {
+  .our-offering-intro {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .our-offering-description {
+    max-width: 62ch;
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+
+  .our-offering-title {
+    font-size: 60px;
+  }
+
+  .our-offering-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px;
+  }
+
+  .our-offering-card {
+    max-width: 100%;
+  }
+
+  .our-offering-card-title {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .our-offering-inner {
+    padding: 80px 20px;
+  }
+
+  .our-offering-kicker {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .our-offering-intro {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    text-align: left;
+  }
+
+  .our-offering-title {
+    font-size: 60px;
+    line-height: 0.98;
+  }
+
+  .our-offering-title br {
+    display: block;
+  }
+
+  .our-offering-title-accent {
+    display: inline;
+    margin-top: 0;
+  }
+
+  .our-offering-description {
+    max-width: 32ch;
+    margin-top: 10px;
+    text-align: left;
+    letter-spacing: -0.03em;
+    font-size: 30px;
+    line-height: 1.45;
+    font-weight: 500;
+  }
+
+  .our-offering-grid {
+    grid-template-columns: 1fr;
+    margin-top: 28px;
+    gap: 40px;
+  }
+
+  .our-offering-card {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .our-offering-card-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .our-offering-card-text {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .our-offering-bottom-strip {
+    left: -14%;
+    right: -14%;
+    bottom: -8%;
+    height: 280px;
+    opacity: 1;
+    filter: blur(9px);
+    background:
+      radial-gradient(68% 84% at 12% 100%, var(--our-offering-glow-purple) 0%, transparent 96%),
+      radial-gradient(66% 82% at 50% 100%, var(--our-offering-glow-pink) 0%, transparent 102%),
+      radial-gradient(76% 92% at 88% 100%, var(--our-offering-glow-orange) 0%, transparent 108%);
+  }
+}
+
+@media (max-width: 380px) {
+  .our-offering-inner {
+    padding: 50px 20px;
+  }
+
+  .our-offering-title {
+    font-size: 60px;
+  }
+
+  .our-offering-description {
+    font-size: 0.97rem;
+    line-height: 1.5;
+    margin-top: -0.04em;
+  }
+
+  .our-offering-card-text {
+    font-size: 0.94rem;
+  }
+
+  .our-offering-bottom-strip {
+    left: -16%;
+    right: -16%;
+    bottom: -2%;
+    height: 250px;
+    filter: blur(8px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .our-offering-inner {
+    padding: 100px 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .our-offering-page {
+    background: #101217;
+  }
+}

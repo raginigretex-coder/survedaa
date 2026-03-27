@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@400;500;700&display=swap');
+
+:root,
+[data-theme='light'] {
+  --features-bg: #f3f3f3;
+  --features-kicker: #0f0f12;
+  --features-title: #0f0f12;
+  --features-subtitle: #0f0f12;
+  --features-intro: #111111;
+  --features-image-card: #d9d9d9;
+  --features-number: #d81b7e;
+  --features-item-title: #111111;
+  --features-item-text: rgba(17, 17, 17, 0.68);
+}
+
+[data-theme='dark'],
+.dark-theme {
+  --features-bg: #111216;
+  --features-kicker: #f4f4f4;
+  --features-title: #f4f4f4;
+  --features-subtitle: #f4f4f4;
+  --features-intro: rgba(244, 244, 244, 0.9);
+  --features-image-card: #1a1c22;
+  --features-number: #ff4ea2;
+  --features-item-title: #f4f4f4;
+  --features-item-text: rgba(244, 244, 244, 0.72);
+}
+
+.features-page {
+  background: var(--features-bg);
+  padding: clamp(48px, 7vw, 110px) clamp(16px, 6vw, 120px);
+}
+
+.features-container {
+  width: min(1300px, 100%);
+  margin: 0 auto;
+}
+
+.features-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 450px);
+  align-items: start;
+  gap: clamp(18px, 4vw, 80px);
+}
+
+.features-heading {
+  max-width: 760px;
+}
+
+.features-kicker {
+  margin: 0 0 12px;
+  font-family: 'Instrument Serif', 'Instrument Serif Placeholder', serif;
+  font-style: italic;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--features-kicker);
+}
+
+.features-title {
+  margin: 0;
+  font-family: 'Satoshi', 'Satoshi Placeholder', sans-serif;
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1em;
+  letter-spacing: -0.04em;
+  color: var(--features-title);
+}
+
+.features-subtitle {
+  margin: 10px 0 0;
+  font-family: 'Instrument Serif', 'Instrument Serif Placeholder', serif;
+  font-style: italic;
+  font-size: clamp(2.2rem, 1.15rem + 4.4vw, 5.8rem);
+  line-height: 0.95;
+  color: var(--features-subtitle);
+}
+
+.features-intro {
+  margin: 100px 0 0;
+  font-family: "Satoshi", "Satoshi Placeholder", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.4em;
+  color: var(--features-intro);
+}
+
+.features-content {
+  margin-top: 120px;
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(600px, 40%) minmax(0, 1fr);
+  gap: 100px;
+  align-items: stretch;
+}
+
+.features-image-card {
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--features-image-card);
+  height: 100%;
+}
+
+.features-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: clamp(320px, 42vw, 620px);
+  object-fit: cover;
+  transition: opacity 220ms ease, transform 280ms ease;
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(22px, 3.2vw, 48px);
+  row-gap: clamp(18px, 2.8vw, 36px);
+}
+
+.features-item {
+  min-height: 118px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.features-item:hover,
+.features-item:focus-visible,
+.features-item.is-active {
+  transform: translateY(-1px);
+}
+
+.features-item:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--features-number) 70%, white);
+  outline-offset: 2px;
+}
+
+.features-item-number {
+  margin: 0;
+  font-family: 'Instrument Serif', 'Instrument Serif Placeholder', serif;
+  font-style: italic;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--features-number);
+}
+
+.features-item-title {
+  margin: 8px 0 0;
+  font-family: "Satoshi", "Satoshi Placeholder", sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  color: var(--features-item-title);
+}
+
+.features-item-description {
+  margin: 8px 0 0;
+  font-family: "Satoshi", "Satoshi Placeholder", sans-serif;
+  font-size: 14px;
+  line-height: 1.6em;
+  color: var(--features-item-text);
+}
+
+@media (max-width: 1200px) {
+  .features-header {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 380px);
+    gap: clamp(16px, 3vw, 42px);
+  }
+
+  .features-content {
+    grid-template-columns: minmax(240px, 38%) minmax(0, 1fr);
+    gap: 80px;
+  }
+
+  .features-list {
+    column-gap: clamp(16px, 2.2vw, 30px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .features-page {
+    padding: clamp(42px, 6vw, 78px) clamp(18px, 4vw, 40px);
+  }
+
+  .features-title {
+    max-width: none;
+    font-size: 100px;
+  }
+
+  .features-subtitle {
+    margin: 10px 0 0;
+    font-size: 100px;
+    margin-top: 0;
+  }
+
+  .features-intro {
+    font-size: 30px;
+    max-width: 28ch;
+  }
+
+  .features-item {
+    min-height: 96px;
+  }
+}
+
+@media (max-width: 900px) {
+  .features-header {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .features-intro {
+    margin-top: 20px;
+    max-width: 100%;
+    line-height: 1.45;
+    font-size: 30px;
+  }
+
+  .features-content {
+    margin-top: 60px;
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .features-image-card {
+    height: auto;
+  }
+
+  .features-image {
+    height: clamp(460px, 88vw, 680px);
+    min-height: 0;
+  }
+
+  .features-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-title {
+    font-size: 60px;
+  }
+
+  .features-subtitle {
+    margin: 10px 0 0;
+    font-size: 60px;
+  }
+
+  .features-intro {
+    font-size: 30px;
+  }
+
+  .features-item-number {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .features-page {
+    padding: 40px 18px;
+  }
+
+  .features-content {
+    margin-top: 60px;
+  }
+
+  .features-list {
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+  }
+
+  .features-image {
+    height: clamp(420px, 102vw, 620px);
+    min-height: 0;
+  }
+
+  .features-item {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .features-page {
+    padding: 34px 14px;
+  }
+
+  .features-title {
+    font-size: 60px;
+  }
+
+  .features-subtitle {
+    margin: 10px 0 0;
+    font-size: 60px;
+  }
+
+  .features-item-title {
+    font-size: 1.14rem;
+  }
+
+  .features-item-description {
+    font-size: 0.92rem;
+  }
+}

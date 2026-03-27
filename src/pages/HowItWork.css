@@ -227,7 +227,7 @@
   border-radius: 0;
   overflow: hidden;
   position: relative;
-  animation: howitwork-media-in 420ms ease both;
+  animation: howitwork-media-in 400ms ease both;
 }
 
 .howitwork-media-image {

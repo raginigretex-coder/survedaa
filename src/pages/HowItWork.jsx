@@ -30,7 +30,7 @@ function HowItWork() {
   useEffect(() => {
     const t = window.setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % SLIDES.length)
-    }, 3500)
+    }, 3000)
 
     return () => window.clearInterval(t)
   }, [])

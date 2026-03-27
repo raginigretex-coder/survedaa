@@ -270,7 +270,7 @@ ul.our-offering-card-text {
 
 @media (min-width: 1440px) {
   .our-offering-inner {
-    padding: 100px 0;
+    padding-bottom: 200px;
   }
 }
 

@@ -17,8 +17,7 @@ function Our_Offering() {
           </h2>
 
           <p className="our-offering-description">
-            Every Music Room is set up and operated end-to-end by SurVedaa â€” so residents enjoy
-            a world-class space without any management burden on the society.
+           Every Music Room is set up and operated end-to-end by SurVedaa — so residents enjoy a world-class space without any management burden on the society.
           </p>
         </div>
 

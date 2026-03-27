@@ -80,7 +80,8 @@
   align-items: center;
   position: relative;
   z-index: 1;
-  padding: clamp(70px, 12vh, 170px) 0 clamp(30px, 6vh, 80px);
+  padding: clamp(40px, 8vh, 120px) 0 clamp(30px, 6vh, 80px);
+  /* padding: clamp(70px, 12vh, 170px) 0 clamp(30px, 6vh, 80px); */
 }
 
 .hero-section {
